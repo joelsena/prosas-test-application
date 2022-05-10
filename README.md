@@ -1,14 +1,11 @@
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Scripts Disponíveis
 
-In the project directory, you can run:
+No diretório do projeto, você pode rodar:
 
-### `yarn start`
+### `yarn start` or `npm run start`
 
-Runs the app in the development mode.<br /> Open
-[http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br /> You will also see any lint errors
-in the console.
+Roda a aplicação em modo de desenvolvimento.<br /> Abra
+[http://localhost:3000](http://localhost:3000) para ver no navegador.

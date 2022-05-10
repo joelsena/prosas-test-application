@@ -1,39 +1,39 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-type editalType = {
-  id: string | number;
-  name: string;
-  proposalLimitValue: number;
+export type editalType = {
+    id: string | number;
+    name: string;
+    proposalLimitValue: number;
 };
-type proposalType = {
-  id: string | number;
-  name: string;
-  requestedValue: number;
+export type proposalType = {
+    id: string | number;
+    name: string;
+    requestedValue: number;
 };
 
 const dataSlice = createSlice({
-  name: "data",
-  initialState: {
-    editals: [] as editalType[],
-    proposals: [] as proposalType[],
-  },
-  reducers: {
-    dataEditalAdd(state, { payload }) {
-      state.editals.push({
-        id: payload.id,
-        name: payload.name,
-        proposalLimitValue: payload.proposalLimitValue,
-      });
+    name: "data",
+    initialState: {
+        editals: [] as editalType[],
+        proposals: [] as proposalType[],
     },
-    dataProposalAdd(state, { payload }) {
-      state.proposals.push({
-        id: payload.id,
-        name: payload.name,
-        requestedValue: payload.requestedValue,
-      });
+    reducers: {
+        dataAddEdital(state, { payload }) {
+            state.editals.push({
+                id: payload.id,
+                name: payload.name,
+                proposalLimitValue: payload.proposalLimitValue,
+            });
+        },
+        dataAddProposal(state, { payload }) {
+            state.proposals.push({
+                id: payload.id,
+                name: payload.name,
+                requestedValue: payload.requestedValue,
+            });
+        },
     },
-  },
 });
 
-export const { dataEditalAdd, dataProposalAdd } = dataSlice.actions;
+export const { dataAddEdital, dataAddProposal } = dataSlice.actions;
 export default dataSlice.reducer;
