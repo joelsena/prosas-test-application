@@ -4,6 +4,8 @@ import { Provider } from "react-redux";
 import { AppRouter } from "../router";
 import { store } from "../store";
 
+// Teste ssh
+
 export const App = () => (
     <ChakraProvider theme={theme}>
         <Provider store={store}>
